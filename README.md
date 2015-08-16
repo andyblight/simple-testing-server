@@ -17,7 +17,7 @@ Example Usage
 Start by spinning up the server using
 
 ```sh
-python simpleTestingServer.py --port <PORT>
+python simpletestingserver.py --port <PORT>
 ```
 
 ### GET
