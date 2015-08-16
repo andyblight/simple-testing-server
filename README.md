@@ -1,15 +1,15 @@
 simple-testing-server
 =====================
 
-A stupidly simple python server that allows you to test client code before you have a server that actually works
-Allows you to test json responses with the proper headers built in, and also custom error codes.
+A stupidly simple Python server that allows you to test client code before you have a server that actually works.
+Allows you to test JSON responses with the proper headers built in, and also custom error codes.
 
 
 
 Motivation
 ---
 
-So say you want to build some sort of app that connects to a client... great! But how are you going to deal with separating the development between the application logic and the backend api? Where are your api calls supposed to go before that server exists? Enter this project.
+So say you want to build some sort of application that connects to a client... great! But how are you going to deal with separating the development between the application logic and the backend API? Where are your API calls supposed to go before that server exists? Enter this project.
 
 Example Usage
 ---
@@ -17,27 +17,26 @@ Example Usage
 Start by spinning up the server using
 
 ```sh
-python simple-testing-server.py --port <PORT>
+python simpleTestingServer.py --port <PORT>
 ```
 
 ### GET
 
-This server uses json as the default object structe. Say you want to get an example json response from your server.
+This server uses JSON as the default object structure. Say you want to get an example JSON response from your server.
 Suppose you're modeling some data in your app. Let's call an example model ```events```. Then 
 
 ```GET http://localhost:<PORT>/events``` 
 
 will return to you the contents of a 
-file called ```events.json``` with proper headers. This file is up to you to create and place in the same folder as the python
-script.
+file called ```events.json``` with proper headers. This file is up to you to create and place in the same folder as the Python script.
 
 More generally, ```GET http://localhost:<PORT>/<model_name>``` will return an ```application/json``` response 
 with content taken from a file called ```<model_name>.json``` placed in the same folder as the script.
-BYO example json files. (use the ```--path``` options if these files are in a different directory)
+BYO example JSON files. (use the ```--path``` options if these files are in a different directory)
 
 ### POST
 
-To make a post request with a successfull (200) response:
+To make a post request with a successful (200) response:
 
 ```POST http://localhost:<PORT>/success```
 
@@ -79,7 +78,7 @@ A list of command line options:
 Compatibility
 ---
 
-AFAIK all versions of python. If you don't have ```argparse``` installed, the custom port won't
+AFAIK all versions of Python3+. If you don't have ```argparse``` installed, the custom port won't 
 work and it will just default to ```PORT=8003``` every time.
 
 
