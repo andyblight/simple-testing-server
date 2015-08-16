@@ -17,7 +17,7 @@ Example Usage
 Start by spinning up the server using
 
 ```sh
-python simpleTestingServer.py --port <PORT>
+python simpletestingserver.py --port <PORT>
 ```
 
 ### GET
@@ -78,7 +78,7 @@ A list of command line options:
 Compatibility
 ---
 
-AFAIK all versions of Python3+. If you don't have ```argparse``` installed, the custom port won't 
+AFAIK all versions of Python3.  If you don't have ```argparse``` installed, the custom port won't 
 work and it will just default to ```PORT=8003``` every time.
 
 
